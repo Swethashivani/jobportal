@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Portal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="./styles/main.css" rel="stylesheet" />
+</head>
+
+<body>
+
+    <section class="hero-banner">
+        <header class="header">
+            <nav class="navbar">
+                <a href="#" class="nav-item"><i class="fa-solid fa-house"></i><span class="nav-label">Home</span></a>
+                <a href="#jobs" class="nav-item"><i class="fa-solid fa-briefcase"></i><span
+                        class="nav-label">Jobs</span></a>
+                <a href="#" class="nav-item"><i class="fa-solid fa-heart"></i>
+                    <span id="nav-fav">0</span><span class="nav-label">Favourites</span></a>
+            </nav>
+        </header>
+        <div class="hero-content">
+            <h2 class="hero-banner-title">Remotly</h2>
+        </div>
+    </section>
+    <section class="job-section">
+        <h3 class="job-section-title">Jobs</h3>
+        <div class="jobs-filters-container">
+            <div class="job-filters">
+                <label for="geo-filter">
+                    <i class="fa-solid fa-filter"></i>Filter By:</label>
+                <select name="geo" id="geo-filter">
+                    <option disabled selected value="">Select Location</option>
+                    <option value="">Anywhere</option>
+            
+                </select>
+                <label for="sort-filter"> <i class="fa-solid fa-sort"></i>
+                    Favourites:</label>
+                <select name="sort" id="fav-filter">
+                    <option value="all">ALL</option>
+                    <option value="true">Interested</option>
+                    <option value="false">Rejected</option>
+                </select>
+            </div>
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input id="job-search" placeholder="Search here...">
+
+            </div>
+        </div>
+        <div class="jobs-container" id="jobs">
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+    <script src="./scripts/main.js"></script>
+</body>
+
+</html>
